@@ -8,7 +8,7 @@ from datetime import datetime
 OLED_I2C_ADDRESS = 0x3C
 
 
-def oled_init(i2c):
+def Oled_init(i2c):
 
     #i2c = wiringpi2.I2C()
     oled_i2c = i2c.setup(OLED_I2C_ADDRESS)
@@ -67,7 +67,7 @@ def oled_init(i2c):
                 i2c.writeReg8(oled_i2c,0x40,0x00)
 
 
-def oled_putString(i2c,y,x,string):
+def Oled_putString(i2c,y,x,string):
     if((y<0) or (y>=8) or (x<0) or (x>=128) ):
         return False
     
@@ -92,7 +92,7 @@ def oled_putString(i2c,y,x,string):
 
 
 
-def oled_putChar(i2c,y,x,string):
+def Oled_putChar(i2c,y,x,string):
     if((y<0) or (y>=4) or (x<0) or (x>=128) ):
         return False
     
@@ -118,8 +118,8 @@ if __name__ == '__main__':
     
     i2c = wiringpi2.I2C()
     
-    oled_init(i2c)
+    Oled_init(i2c)
 
-    #oled_putChar(i2c,1,1,(0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xf))
+    #Oled_putChar(i2c,1,1,(0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xf))
     
-    oled_putString(i2c,0,1,[[0, 192, 56, 6, 56, 192, 0, 0, 60, 3, 2, 2, 2, 3, 60, 0], [254, 130, 130, 130, 196, 56, 0, 0, 63, 32, 32, 32, 32, 17, 14, 0], [240, 12, 2, 2, 2, 4, 8, 0, 7, 24, 32, 32, 32, 16, 8, 0]])
+    Oled_putString(i2c,0,1,[[0, 192, 56, 6, 56, 192, 0, 0, 60, 3, 2, 2, 2, 3, 60, 0], [254, 130, 130, 130, 196, 56, 0, 0, 63, 32, 32, 32, 32, 17, 14, 0], [240, 12, 2, 2, 2, 4, 8, 0, 7, 24, 32, 32, 32, 16, 8, 0]])

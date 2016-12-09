@@ -6975,14 +6975,14 @@ OLED_FONT_DATA = {
 "~": [16, 8, 8, 16, 32, 32, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 } #FONT_DATA
 
-def putFont(keycode):
+def Font_getChar(keycode):
 
     print(keycode)
     return OLED_FONT_DATA[keycode]
 
 
 
-def putsFontArray(keyarray):
+def Font_getString(keyarray):
     resultCode=[]
 
 
@@ -6997,11 +6997,11 @@ def putsFontArray(keyarray):
 
 if __name__ == '__main__':
 
-    print(putFont("二"))
-    print(putsFontArray("！!"))
+    print(Font_getChar("二"))
+    print(Font_getString("！!"))
     
 
-    print(putsFontArray("重田　雄志"))
+    print(Font_getString("あいうえ　雄志"))
     
 
 
