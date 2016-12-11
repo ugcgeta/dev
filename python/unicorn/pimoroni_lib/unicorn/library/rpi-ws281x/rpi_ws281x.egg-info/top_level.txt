@@ -1,0 +1,2 @@
+neopixel
+_rpi_ws281x
