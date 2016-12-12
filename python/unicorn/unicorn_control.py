@@ -50,7 +50,7 @@ def Unic_setPixel(plane,x,y,red,green,blue):
     
     rgb = [abs(red),abs(green),abs(blue)]
 
-    UnicForeList[_pixToList(plane,x,y)] = rgb
+    _UnicPlaneList[_pixToList(plane,x,y)] = rgb
 
     if(plane == _UnicPlaneNow):
         unicorn.set_pixel(x,y,red,green,blue)
@@ -58,19 +58,19 @@ def Unic_setPixel(plane,x,y,red,green,blue):
 # 座標にRGB値を取得
 def Unic_getPixel(plane,x,y,red,green,blue):
     
-    rgb = UnicForeList[_pixToList(plane,x,y)]
+    rgb = _UnicPlaneList[_pixToList(plane,x,y)]
     return rgb
 
 # プレーン番号の更新
 # 番号更新時のLED情報を更新
 def Unic_setPlane(plane):
-	global _UnicPlaneNow
-	
+    global _UnicPlaneNow
+
     if(abs(plane) < UNIC_PLANE_MAX):
         _UnicPlaneNow = abs(plane)
         for x in range(_UnicWidth):
             for y in range(_UnicHeight):
-                rgb = UnicForeList[_pixToList(_UnicPlaneNow,x,y)]
+                rgb = _UnicPlaneList[_pixToList(_UnicPlaneNow,x,y)]
                 unicorn.set_pixel(x,y,*rgb)
         
 
@@ -88,7 +88,7 @@ def Unic_show(plane=0):
 ##############################################
 if __name__ == '__main__':
     
-    Unic_init(0,0.9)
+    Unic_init(0,0.999)
     Unic_setPixel(0,1,3,0,255,0)
     Unic_setPixel(1,0,0,0,255,0)
     
