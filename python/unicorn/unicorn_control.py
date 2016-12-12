@@ -4,33 +4,38 @@ import struct
 import os
 from time import sleep
 
-AM2320_I2C_SLEEP_ERROR = -1
 UNIC_GROUNG_FORE = 0
 UNIC_GROUNG_BACK = 1
+UNIC_PLANE_MAX = 8
 
-UnicWidth = 8
-UnicHeight = 4
-UnicForeList = []
-UnicBackList = []
+# LEDの水平、垂直幅
+__UnicWidth = 8
+__UnicHeight = 4
+
+# 現在のLED値8面分
+_UnicPlaneList = []
+_UnicPlaneNow = 0
+
 def Unic_init(rotation=0,brightness=0.5):
-    global UnicWidth
-    global UnicHeight
+    global _UnicWidth
+    global _UnicHeight
 
     global UnicForeList
     global UnicBackList
     unicorn.set_layout(unicorn.AUTO)
     unicorn.rotation(rotation)
     unicorn.brightness(brightness)
-    UnicWidth,UnicHeight=unicorn.get_shape()
+    _UnicWidth,_UnicHeight=unicorn.get_shape()
 
-    for y in range(UnicHeight):
-        for x in range(UnicWidth):
-            UnicForeList.append([0,0,0])
-            UnicBackList.append([False,0,0,0])
+    for x in range(_UnicWidth):
+    	for y in range(_UnicHeight):
+            _UnicPlaneList.append([0,0,0])
 
+# xy座標をindexに変換
+def _pixToList(p,x,y):
+    return y + x*_UnicHeight + p*(_UnicHeight*_UnicWidth)
 
-def _pixToList(x,y):
-    return y*UnicWidth+x
+# 値のクリップ
 def _clipValue(min,max,val):
     if(val<min):
         return min
@@ -39,32 +44,29 @@ def _clipValue(min,max,val):
     else:
         return val
 
-
-def Unic_setPixel(x,y,red,green,blue):
-    global UnicForeList
-    global UnicBackList
-
-    rgbFore = [abs(red),abs(green),abs(blue)]
-
-    UnicForeList[_pixToList(x,y)] = rgbFore
-
-#    if((red<0) or (green<0) or (blue<0)):
-#        rgbBack = [clipValue(0,255,red)
-#                   ,clipValue(0,255,green)
-#                   ,clipValue(0,255,blue)]
-#        UnicBackList[_pixToList(x,y)] = (True,rgbBack)
- #   else:
- #       UnicBackList[_pixToList(x,y)] = (False,)
-
-    unicorn.set_pixel(x,y,red,green,blue)
-
-def Unic_show(ground=0):
+# 座標にRGB値を設定
+def Unic_setPixel(plane,x,y,red,green,blue):
+    global _UnicPlaneList
     
-#    if(ground == UNIC_GROUNG_BACK):
-#        for x in range(UnicWidth):
-#            for y in range(UnicHeight):
-#                unicorn.set_pixel(x,y,red,green,blue)
+    rgb = [abs(red),abs(green),abs(blue)]
+
+    UnicForeList[_pixToList(plane,x,y)] = rgb
+
+    if(plane == _UnicPlaneNow):
+        unicorn.set_pixel(x,y,red,green,blue)
+
+# プレーン番号の更新
+# 番号更新時のLED情報を更新
+
+# 表示
+# 表示プレーンと現在のプレーンが異なる場合はLED情報を更新してから表示
+def Unic_show(plane=0):
+    
+	if(plane != _UnicPlaneNow):
+		_UnicPlaneNow = plane
+		
     unicorn.show()
+    
 ##############################################
 if __name__ == '__main__':
     
@@ -74,8 +76,8 @@ if __name__ == '__main__':
     Unic_show()
     sleep(5)
 
-    for x in range(UnicWidth):
-        for y in range(UnicHeight):
+    for x in range(_UnicWidth):
+        for y in range(_UnicHeight):
             rgb = (x*32,0,y*64)
             Unic_setPixel(x,y,*rgb)
             Unic_show()
