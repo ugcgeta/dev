@@ -24,7 +24,7 @@ def Am2320_getSensor():
         pass
     
     # read data controlDatax2 wetDatax2 TempDatax2
-    dataArray = struct.unpack('6B',os.read(am2320,6))
+    dataArray = struct.unpack('6B',os.read(_Am2320,6))
         
     Humidity = (float)((dataArray[2]<<8) | dataArray[3])/10
     temperature = (float)((dataArray[4]<<8) | dataArray[5])/10

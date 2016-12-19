@@ -3,10 +3,10 @@
 import Adafruit_BMP.BMP085 as BMP085
 
 _Bmp180 = 0
-def Bmp180_init():
+def Bmp180_init(mode = BMP085.BMP085_STANDARD):
     global _Bmp180
 
-    _Bmp180 = BMP085.BMP085()
+    _Bmp180 = BMP085.BMP085(mode)
 
 
 def Bmp180_getSensor():

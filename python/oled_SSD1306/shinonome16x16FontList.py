@@ -6977,7 +6977,7 @@ OLED_FONT_DATA = {
 
 def Font_getChar(keycode):
 
-    print(keycode)
+    #print(keycode)
     return OLED_FONT_DATA[keycode]
 
 
@@ -6989,7 +6989,7 @@ def Font_getString(keyarray):
     for n in range (0,len(keyarray)):
         #print(keyarray[n],len(keyarray))
 
-        resultCode.append(putFont(str(keyarray[n])))
+        resultCode.append(Font_getChar(str(keyarray[n])))
     return resultCode
 
 
