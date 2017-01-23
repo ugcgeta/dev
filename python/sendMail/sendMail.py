@@ -5,12 +5,12 @@ import os.path
 import datetime
 import smtplib
 import threading
-from email import Encoders
-from email.Utils import formatdate
-from email.MIMEBase import MIMEBase
-from email.Header import Header
-from email.MIMEMultipart import MIMEMultipart
-from email.MIMEText import MIMEText
+from email import encoders
+from email.utils import formatdate
+from email.mime.base import MIMEBase
+from email.header import Header
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 #Gmailアカウント
 ADDRESS = "ugcgeta2@gmail.com"
@@ -56,7 +56,7 @@ class SendMail():
 		#    file = open(attach_file['path'])
 		#    attachment.set_payload(file.read())
 		#    file.close()
-		#    Encoders.encode_base64(attachment)
+		#    encoders.encode_base64(attachment)
 		#    msg.attach(attachment)
 		#    attachment.add_header("Content-Disposition","attachment", filename=attach_file['name'])
 
