@@ -21,8 +21,11 @@ def Am2320_getSensor():
     
     # ダミーリードでセンサを起こす
     while(_I2c.writeReg16(_Am2320,0x03,0x0600)==_AM2320_I2C_SLEEP_ERROR):
+        sleep(0.001) #wait
         pass
     
+    sleep(0.002) # 800usec + 1.5msec wait
+
     # read data controlDatax2 wetDatax2 TempDatax2
     dataArray = struct.unpack('6B',os.read(_Am2320,6))
         
@@ -57,7 +60,7 @@ if __name__ == '__main__':
 #        print(datetime.now().strftime('%X')," >>>  ",wet,"%  , ",tmp,"'C")
         tmp,wet = Am2320_getSensor()
         print(datetime.now().strftime('%X')," >>>  ",wet,"%  , ",tmp,"'C")
-        sleep(10)
+        sleep(20)
     
     Am2320_close()
 
