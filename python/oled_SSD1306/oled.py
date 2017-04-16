@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import wiringpi
-import wiringpi2
+#import wiringpi2
 import os
 import struct
 from time import sleep
@@ -10,7 +10,7 @@ OLED_I2C_ADDRESS = 0x3C
 
 def Oled_init(i2c):
 
-    #i2c = wiringpi2.I2C()
+    #i2c = wiringpi.I2C()
     oled_i2c = i2c.setup(OLED_I2C_ADDRESS)
     
     i2c.writeReg8(oled_i2c,0x00,0xAE)  # display off
@@ -114,12 +114,12 @@ def Oled_putChar(i2c,y,x,string):
 ################################################################
 if __name__ == '__main__':
     
-    wiringpi2.wiringPiSetup()
+    wiringpi.wiringPiSetup()
     
-    i2c = wiringpi2.I2C()
+    i2c = wiringpi.I2C()
     
     Oled_init(i2c)
 
     #Oled_putChar(i2c,1,1,(0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xf))
     
-    Oled_putString(i2c,0,1,[[0, 192, 56, 6, 56, 192, 0, 0, 60, 3, 2, 2, 2, 3, 60, 0], [254, 130, 130, 130, 196, 56, 0, 0, 63, 32, 32, 32, 32, 17, 14, 0], [240, 12, 2, 2, 2, 4, 8, 0, 7, 24, 32, 32, 32, 16, 8, 0]])
+    Oled_putString(i2c,1,1,[[0, 192, 56, 6, 56, 192, 0, 0, 60, 3, 2, 2, 2, 3, 60, 0], [254, 130, 130, 130, 196, 56, 0, 0, 63, 32, 32, 32, 32, 17, 14, 0], [240, 12, 2, 2, 2, 4, 8, 0, 7, 24, 32, 32, 32, 16, 8, 0]])

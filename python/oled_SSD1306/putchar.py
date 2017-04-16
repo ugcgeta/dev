@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import wiringpi
-import wiringpi2
+#import wiringpi2
 import os
 import struct
 from time import sleep
@@ -11,8 +11,8 @@ from oled import Oled_init,Oled_putString,Oled_putChar
 ######################################################
 if __name__ == '__main__':
     
-    wiringpi2.wiringPiSetup()
-    i2c = wiringpi2.I2C()
+    wiringpi.wiringPiSetup()
+    i2c = wiringpi.I2C()
     Oled_init(i2c)
     
     string = ("君の名はという","もう見ましたか","名作らしいです")
