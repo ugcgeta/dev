@@ -19,8 +19,8 @@ def _clip(inVal,minVal,maxVal):
 #############################################
 if __name__ == '__main__':
     
-    wiringpi2.wiringPiSetup()
-    i2c = wiringpi2.I2C()
+    wiringpi.wiringPiSetup()
+    i2c = wiringpi.I2C()
 
     Am2320_init(i2c)
     Oled_init(i2c)

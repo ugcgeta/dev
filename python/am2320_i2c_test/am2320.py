@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import wiringpi
-import wiringpi2
 import os
 import struct
 from time import sleep
@@ -42,8 +41,8 @@ def Am2320_close():
 #############################################
 if __name__ == '__main__':
     
-    wiringpi2.wiringPiSetup()
-    i2c = wiringpi2.I2C()
+    wiringpi.wiringPiSetup()
+    i2c = wiringpi.I2C()
 #    am2320 = i2c.setup(0x5C)
 
     Am2320_init(i2c)
