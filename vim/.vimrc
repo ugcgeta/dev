@@ -1,35 +1,11 @@
-"#####dein.vimの設定#####
-if &compatible
-  set nocompatible
-endif
-set runtimepath+=/home/pi/.vim/dein/.//repos/github.com/Shougo/dein.vim
-
-"if dein#load_state(expand('~/.vim/dein'))
-  call dein#begin(expand('~/.vim/dein'))
-
-  " プラグインリストを収めたTOMLファイル
-  let g:dein_dir = expand('~/.vim/dein')
-  let s:toml = g:dein_dir . '/dein.toml'
-  let s:lazy_toml = g:dein_dir . '/dein_lazy.toml'
-
-  "TOMLファイルにpluginを記述
-  call dein#load_toml(s:toml, {'lazy': 0})
-  call dein#load_toml(s:lazy_toml, {'lazy': 1})
-
-  call dein#end()
-  call dein#save_state()
-"endif
-
-"未インストールを確認
-if dein#check_install()
-  call dein#install()
-endif
-
-filetype plugin indent on
+autocmd FileType python setl autoindent
+autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 set nocompatible
 set number
 set backspace=indent,eol,start
+"set expandtab
 set autoindent
 set smartindent
 set tabstop=4
@@ -88,18 +64,18 @@ set novisualbell
 set listchars=tab:>.,trail:-,extends:>,precedes:<,nbsp:%,eol:/
 
 " 入力モード中に素早くjjと入力した場合はESCとみなす
-inoremap jj <Esc>
+"inoremap jj <Esc>
 
 " カーソル下の単語を * で検索
 vnoremap <silent> * "vy/\V<C-r>=substitute(escape(@v, '\/'), "\n", '\\n', 'g')<CR><CR>
 
 " 検索後にジャンプした際に検索単語を画面中央に持ってくる
-nnoremap n nzz
-nnoremap N Nzz
-nnoremap * *zz
-nnoremap # #zz
-nnoremap g* g*zz
-nnoremap g# g#zz
+"nnoremap n nzz
+"nnoremap N Nzz
+"nnoremap * *zz
+"nnoremap # #zz
+"nnoremap g* g*zz
+"nnoremap g# g#zz
 
 " j, k による移動を折り返されたテキストでも自然に振る舞うように変更
 nnoremap j gj
@@ -113,24 +89,24 @@ nnoremap <Tab> %
 vnoremap <Tab> %
 
 " Ctrl + hjkl でウィンドウ間を移動
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+"nnoremap <C-h> <C-w>h
+"nnoremap <C-j> <C-w>j
+"nnoremap <C-k> <C-w>k
+"nnoremap <C-l> <C-w>l
 
 " Shift + 矢印でウィンドウサイズを変更
-nnoremap <S-Left>  <C-w><<CR>
-nnoremap <S-Right> <C-w>><CR>
-nnoremap <S-Up>    <C-w>-<CR>
-nnoremap <S-Down>  <C-w>+<CR>
+"nnoremap <S-Left>  <C-w><<CR>
+"nnoremap <S-Right> <C-w>><CR>
+"nnoremap <S-Up>    <C-w>-<CR>
+"nnoremap <S-Down>  <C-w>+<CR>
 
 " T + ? で各種設定をトグル
-nnoremap [toggle] <Nop>
-nmap T [toggle]
-nnoremap <silent> [toggle]s :setl spell!<CR>:setl spell?<CR>
-nnoremap <silent> [toggle]l :setl list!<CR>:setl list?<CR>
-nnoremap <silent> [toggle]t :setl expandtab!<CR>:setl expandtab?<CR>
-nnoremap <silent> [toggle]w :setl wrap!<CR>:setl wrap?<CR>
+"nnoremap [toggle] <Nop>
+"nmap T [toggle]
+"nnoremap <silent> [toggle]s :setl spell!<CR>:setl spell?<CR>
+"nnoremap <silent> [toggle]l :setl list!<CR>:setl list?<CR>
+"nnoremap <silent> [toggle]t :setl expandtab!<CR>:setl expandtab?<CR>
+"nnoremap <silent> [toggle]w :setl wrap!<CR>:setl wrap?<CR>
 
 " w!! でスーパーユーザーとして保存（sudoが使える環境限定）
 cmap w!! w !sudo tee > /dev/null %
