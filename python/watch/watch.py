@@ -35,9 +35,9 @@ if __name__ == '__main__':
         wetString = ("%02.1f" % wet)
         hPaString = ("%04.2f" % hPa)
         
-        nowTime = datetime.now().strftime('%Y/%m/%d %H:%M')
+        nowTime = datetime.now().strftime('%H:%M')
         
-        Oled_putString(i2c,0,0,Font_getString(nowTime))
+        Oled_putStringX2(i2c,0,20,Font_getString(nowTime))
         Oled_putString(i2c,2,2,Font_getString(tmpString+"℃"))
         Oled_putString(i2c,2,70,Font_getString(wetString+"％"))
         Oled_putString(i2c,3,0,Font_getString(hPaString+"hPa"))
