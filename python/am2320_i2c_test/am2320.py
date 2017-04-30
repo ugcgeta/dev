@@ -59,7 +59,7 @@ if __name__ == '__main__':
 #        print(datetime.now().strftime('%X')," >>>  ",wet,"%  , ",tmp,"'C")
         tmp,wet = Am2320_getSensor()
         print(datetime.now().strftime('%X')," >>>  ",wet,"%  , ",tmp,"'C")
-        sleep(20)
+        sleep(2)
     
     Am2320_close()
 

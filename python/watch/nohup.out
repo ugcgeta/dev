@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "watch.py", line 31, in <module>
+    tmp,wet = Am2320_getSensor()
+  File "/home/pi/dev/python/watch/am2320.py", line 23, in Am2320_getSensor
+    sleep(0.001) #wait
+KeyboardInterrupt

@@ -7,12 +7,14 @@ from time import sleep
 from datetime import datetime
 OLED_I2C_ADDRESS = 0x3C
 
+_Oled_i2c = 0
 
 def Oled_init(i2c):
-
+    global _Oled_i2c
     #i2c = wiringpi.I2C()
-    oled_i2c = i2c.setup(OLED_I2C_ADDRESS)
-    
+    _Oled_i2c = i2c.setup(OLED_I2C_ADDRESS)
+    oled_i2c = _Oled_i2c
+
     i2c.writeReg8(oled_i2c,0x00,0xAE)  # display off
     i2c.writeReg8(oled_i2c,0x00,0xA4)  # RAM reset
     #i2c.writeReg8(oled_i2c,0x00,0xA5)  # Entire display ON
@@ -71,7 +73,7 @@ def Oled_putString(i2c,y,x,string):
     if((y<0) or (y>=8) or (x<0) or (x>=128) ):
         return False
     
-    oled_i2c = i2c.setup(OLED_I2C_ADDRESS)
+    oled_i2c = _Oled_i2c
 
     fontSize = 0
     nextFontOffset = 0
@@ -94,13 +96,13 @@ def Oled_putStringX2(i2c,y,x,string):
     cursolPos = x
     for font in string:
         cursolPos = Oled_putCharX2(i2c,y,cursolPos,font)
-        print(cursolPos)
+        #print(cursolPos)
 
 def Oled_putChar(i2c,y,x,string):
     if((y<0) or (y>=4) or (x<0) or (x>=128) ):
         return False
     
-    oled_i2c = i2c.setup(OLED_I2C_ADDRESS)
+    oled_i2c = _Oled_i2c
     
     fontSize = (int)(len(string)/2)
     for line in range(0,2):
@@ -118,7 +120,7 @@ def Oled_putCharX2(i2c,y,x,string):
     if((y<0) or (y>=2) or (x<0) or (x>=96) ):
         return False
     
-    oled_i2c = i2c.setup(OLED_I2C_ADDRESS)
+    oled_i2c = _Oled_i2c
    
     fontX2 = []
     for lineX2 in range(2):

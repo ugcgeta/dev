@@ -25,6 +25,10 @@ if __name__ == '__main__':
     Am2320_init(i2c)
     Oled_init(i2c)
     Bmp180_init(BMP085.BMP085_ULTRAHIGHRES)
+
+    today = datetime.today()
+    print('Log FileName = ',today.strftime("%Y%m%d_%H%M%S"),".log")
+    f = open(today.strftime("%Y%m%d_%H%M%S")+'.log', 'w')
     
     sleep(1)
     while(True):
@@ -42,6 +46,11 @@ if __name__ == '__main__':
         Oled_putString(i2c,2,70,Font_getString(wetString+"％"))
         Oled_putString(i2c,3,0,Font_getString(hPaString+"hPa"))
         
+        logTime = datetime.now().strftime('%Y-%m-%s %H:%M:%S')
+        f.write(logTime+' '+tmpString+"℃ "+ wetString+"％ " + hPaString+"hPa" + '\n')
+        print(logTime+' '+tmpString+"℃ "+ wetString+"％ " + hPaString+"hPa")
+        
+
         for secCount in range(20):
             if((secCount%2) == 0):
                 Oled_putString(i2c,3,119,Font_getString("."))
@@ -49,5 +58,6 @@ if __name__ == '__main__':
                 Oled_putString(i2c,3,119,Font_getString(" "))
             sleep(1)
 
+    f.close()
     Am2320_close()
 

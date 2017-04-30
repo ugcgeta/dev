@@ -1,1 +1,1 @@
-../am2320_i2c_test/am2320.py
+../am2320_1wire/am2320.py
