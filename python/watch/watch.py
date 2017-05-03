@@ -46,7 +46,7 @@ if __name__ == '__main__':
         Oled_putString(i2c,2,70,Font_getString(wetString+"％"))
         Oled_putString(i2c,3,0,Font_getString(hPaString+"hPa"))
         
-        logTime = datetime.now().strftime('%Y-%m-%s %H:%M:%S')
+        logTime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         f.write(logTime+' '+tmpString+"℃ "+ wetString+"％ " + hPaString+"hPa" + '\n')
         print(logTime+' '+tmpString+"℃ "+ wetString+"％ " + hPaString+"hPa")
         
