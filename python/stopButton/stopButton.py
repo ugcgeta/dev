@@ -8,7 +8,7 @@ if __name__ == '__main__':
 
     wiringpi.pinMode(ButtonPin,0)
 
-    MP3_load("test.mp3")
+    MP3_load("/home/pi/dev/python/stopButton/test.mp3")
     MP3_play(1)
 
     while(wiringpi.digitalRead(ButtonPin)==1):

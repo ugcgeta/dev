@@ -42,11 +42,16 @@ if __name__ == '__main__':
     while(True):
         nowTime = datetime.now().strftime('%H:%M')
 
-        tmp,wet = Am2320_getSensor()
         try:
+            tmp,wet = Am2320_getSensor()
             tmpBmp,hPa,alt = Bmp180_getSensor()
         except:
             i2c.write(0x00,0x06)  # reset I2C
+            tmp = 0
+            wet = 0
+            tmpBmp = 0
+            hPa = 0
+            alt = 0
 
         tmpString = ("%02.1f" % tmp)
         wetString = ("%02.1f" % wet)
