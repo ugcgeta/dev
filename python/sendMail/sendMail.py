@@ -13,8 +13,8 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 #Gmailアカウント
-ADDRESS = "ugcgeta2@gmail.com"
-PASSWARD = "ug0063ug0063"
+ADDRESS = "hogehoge@gmail.com"
+PASSWARD = "hoge0063hoge0063"
 
 #SMTPサーバの設定(Gmail用)
 SMTP = "smtp.gmail.com"
@@ -85,6 +85,6 @@ def send(add, sub, body):
 	SendMail(add, sub, body)
 
 if __name__ == '__main__':
-	print('send("ugcgeta@gmail.com", "Test", "ABC_TEST")')
-	send("ugcgeta@gmail.com", "Test", "ABC_TEST")
+	print('send("hoge@gmail.com", "Test", "ABC_TEST")')
+	send("hoge@gmail.com", "Test", "ABC_TEST")
 	
