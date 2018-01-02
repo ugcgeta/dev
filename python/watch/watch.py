@@ -6,7 +6,7 @@ from datetime import datetime
 from am2320 import *
 from oled import *
 from shinonome16x16FontList import *
-from bmp180 import *
+#from bmp180 import *
 
 def _clip(inVal,minVal,maxVal):
     if(inVal<=minVal):
@@ -31,7 +31,7 @@ if __name__ == '__main__':
 
     Am2320_init(i2c)
     Oled_init(i2c)
-    Bmp180_init(BMP085.BMP085_ULTRAHIGHRES)
+#    Bmp180_init(BMP085.BMP085_ULTRAHIGHRES)
     
     #today = datetime.today()
     #logFileName = today.strftime("%Y%m%d_%H%M%S")+'.log'
@@ -44,31 +44,35 @@ if __name__ == '__main__':
 
         try:
             tmp,wet = Am2320_getSensor()
-            tmpBmp,hPa,alt = Bmp180_getSensor()
+#            tmpBmp,hPa,alt = Bmp180_getSensor()
         except:
             i2c.write(0x00,0x06)  # reset I2C
             tmp = 0
             wet = 0
             tmpBmp = 0
-            hPa = 0
-            alt = 0
+#            hPa = 0
+#            alt = 0
+#            Bmp180_init(BMP085.BMP085_ULTRAHIGHRES)
 
         tmpString = ("%02.1f" % tmp)
         wetString = ("%02.1f" % wet)
-        hPaString = ("%04.2f" % hPa)
+ #       hPaString = ("%04.2f" % hPa)
        
         try:
             Oled_putStringX2(i2c,0,20,Font_getString(nowTime))
             Oled_putString(i2c,2,2,Font_getString(tmpString+"℃"))
             Oled_putString(i2c,2,70,Font_getString(wetString+"％"))
-            Oled_putString(i2c,3,0,Font_getString(hPaString+"hPa"))
+#            Oled_putString(i2c,3,0,Font_getString(hPaString+"hPa"))
         except:
             i2c.write(0x00,0x06)  # reset I2C
+            Oled_init(i2c)
 
         logTime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        f.write(logTime+' '+tmpString+"℃ "+ wetString+"％ " + hPaString+"hPa" + '\n')
-        print(logTime+' '+tmpString+"℃ "+ wetString+"％ " + hPaString+"hPa")
+#        f.write(logTime+' '+tmpString+"℃ "+ wetString+"％ " + hPaString+"hPa" + '\n')
+#        print(logTime+' '+tmpString+"℃ "+ wetString+"％ " + hPaString+"hPa")
         
+        f.write(logTime+' '+tmpString+"℃ "+ wetString+"％ " + '\n')
+        print(logTime+' '+tmpString+"℃ "+ wetString+"％ " )
 
         for secCount in range(20):
             if((secCount%2) == 0):
