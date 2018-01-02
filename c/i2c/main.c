@@ -8,7 +8,7 @@
 #include <sys/ioctl.h>
 
 #define I2C_DEVICE_NAME		"/dev/i2c-1"
-#define I2C_SLAVE_ADDRESS	(0xEE)
+#define I2C_SLAVE_ADDRESS	(0x77)
 
 int main(int argc, char **argv)
 {
@@ -20,17 +20,17 @@ int main(int argc, char **argv)
 		return 1;
 	}
 	if (ioctl(i2c_fd, I2C_SLAVE, I2C_SLAVE_ADDRESS) < 0) {
-		fprintf(stderr,"Unable to get bus slave access¥n");
+		fprintf(stderr,"Unable to get bus slave access ¥n");
 		return 1;
 	}
 	
 	__s32 res1 = i2c_smbus_write_byte_data(i2c_fd, 0xF4, 0x2E);
 	__s32 res2 = i2c_smbus_read_word_data(i2c_fd, 0xF6);
-	if(res < 0){
+	if(res2 < 0){
 		fprintf(stderr,"Error i2c_smbus_read_word_data()¥n");
 		return 1;
 	}
-	printf("%x\n",res)
+	printf("%x\n",res2);
 	
 	return 0;
 }
