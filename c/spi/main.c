@@ -151,6 +151,12 @@ bool SSD1331_writeCommand(unsigned char* tx, int txSize)
 	return true;
 }
 
+bool SSD1331_writeOneCommand(unsigned char tx)
+{
+	
+	return SSD1331_writeCommand(&tx, 1);
+}
+
 bool SSD1331_writeData(unsigned char* tx, int txSize)
 {
 
@@ -161,7 +167,11 @@ bool SSD1331_writeData(unsigned char* tx, int txSize)
 
 	return true;
 }
-
+bool SSD1331_writeOneData(unsigned char tx)
+{
+	
+	return SSD1331_writeData(&tx, 1);
+}
 bool SSD1331_close(char* portRst, char* portDC)
 {
 	GPIO_close(portRst);
@@ -176,9 +186,81 @@ int main()
 {
 	SSD1331_init("24", "25");
 
+	SSD1331_writeOneCommand(0xAE); //Set Display Off
+	SSD1331_writeOneCommand(0xA0); //Remap & Color Depth setting　
+	SSD1331_writeOneCommand(0x32); //A[7:6] = 00; 256 color. A[7:6] = 01; 65k color format
+	SSD1331_writeOneCommand(0xA1); //Set Display Start Line
+	SSD1331_writeOneCommand(0x00);
+	SSD1331_writeOneCommand(0xA2); //Set Display Offset
+	SSD1331_writeOneCommand(0x00);
+	SSD1331_writeOneCommand(0xA4); //Set Display Mode (Normal)
+	SSD1331_writeOneCommand(0xA8); //Set Multiplex Ratio
+	SSD1331_writeOneCommand(63); //15-63
+	SSD1331_writeOneCommand(0xAD); //Set Master Configration
+	SSD1331_writeOneCommand(0x8E); //a[0]=0 Select external Vcc supply, a[0]=1 Reserved(reset)
+	SSD1331_writeOneCommand(0xB0); //Power Save Mode
+	SSD1331_writeOneCommand(0x1A); //0x1A Enable power save mode. 0x00 Disable
+	SSD1331_writeOneCommand(0xB1); //Phase 1 and 2 period adjustment
+	SSD1331_writeOneCommand(0x74);
+	SSD1331_writeOneCommand(0xB3); //Display Clock DIV
+	SSD1331_writeOneCommand(0xF0);
+	SSD1331_writeOneCommand(0x8A); //Pre Charge A
+	SSD1331_writeOneCommand(0x81);
+	SSD1331_writeOneCommand(0x8B); //Pre Charge B
+	SSD1331_writeOneCommand(0x82);
+	SSD1331_writeOneCommand(0x8C); //Pre Charge C
+	SSD1331_writeOneCommand(0x83);
+	SSD1331_writeOneCommand(0xBB); //Set Pre-charge level
+	SSD1331_writeOneCommand(0x3A);
+	SSD1331_writeOneCommand(0xBE); //Set VcomH
+	SSD1331_writeOneCommand(0x3E);
+	SSD1331_writeOneCommand(0x87); //Set Master Current Control
+	SSD1331_writeOneCommand(0x06);
+	SSD1331_writeOneCommand(0x15); //Set Column Address
+	SSD1331_writeOneCommand(0x00);
+	SSD1331_writeOneCommand(95);
+	SSD1331_writeOneCommand(0x75); //Set Row Address
+	SSD1331_writeOneCommand(0x00);
+	SSD1331_writeOneCommand(63);
+	SSD1331_writeOneCommand(0x81); //Set Contrast for Color A
+	SSD1331_writeOneCommand(0xFF);
+	SSD1331_writeOneCommand(0x82); //Set Contrast for Color B
+	SSD1331_writeOneCommand(0xFF);
+	SSD1331_writeOneCommand(0x83); //Set Contrast for Color C
+	SSD1331_writeOneCommand(0xFF);
+	SSD1331_writeOneCommand(0xAF); //Set Display On
+	usleep(200000); //0xAFコマンド後最低100ms必要
 
 
+	{
+		int i, j;
+		unsigned char R, G, B, Dot1, Dot2;
+		 
 
+		 for(j=0; j<64; j++){ //画面黒塗りつぶし
+			for(i=0; i<96; i++){
+				SSD1331_writeOneData(0);
+			}
+		 }
+
+		 R = 7; G = 0; B = 0; //256 color : R (0-7), G (0-7), B (0-3) 
+		 Dot1 = (R << 5) | (G << 2) | B;
+		  
+		  R = 0; G = 0; B = 3; //256 color : R (0-7), G (0-7), B (0-3) 
+		  Dot2 = (R << 5) | (G << 2) | B;
+		   
+		   for(j=0; j<64; j++){
+			for(i=0; i<96; i++){
+				if(j<8 && i<16) {
+					SSD1331_writeOneData(Dot1);
+				}else{
+					SSD1331_writeOneData(Dot2);
+				}
+			}
+		   }
+	}
+
+	usleep(20000000); //0xAFコマンド後最低100ms必要
 
 	SSD1331_close("24", "25");
 	return true;
