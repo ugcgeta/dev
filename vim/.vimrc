@@ -110,8 +110,14 @@ vnoremap <Tab> %
 
 " w!! でスーパーユーザーとして保存（sudoが使える環境限定）
 cmap w!! w !sudo tee > /dev/null %
+augroup vimrcEx
+  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+    \ exe "normal g`\"" | endif
+augroup END
 
 if &t_Co > 1
     syntax enable
+    colorscheme darkblue
 endif
+
 
