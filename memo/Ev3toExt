@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2019-12-28T14:15:51.392Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36" etag="7TUGL3Q0AIJ2RYhmSrn_" version="12.4.7" type="github" pages="2">
+<mxfile host="www.draw.io" modified="2019-12-28T20:03:25.262Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36" etag="9HW1Azev6770ZX8FHKq5" version="12.4.7" type="github" pages="2">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
     <mxGraphModel dx="782" dy="657" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -198,7 +198,14 @@
           <mxGeometry x="560" y="80" width="100" height="660" as="geometry"/>
         </mxCell>
         <mxCell id="doZrAfIAgg1TxckknBKI-2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="doZrAfIAgg1TxckknBKI-1">
-          <mxGeometry x="45" y="80" width="10" height="30" as="geometry"/>
+          <mxGeometry x="45" y="100" width="10" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="jXakCbgoLWf2iP11kaQW-0" value="起動通知&lt;br&gt;(データキュー)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="nmmA_ZJXvpLb5Fq_FxLa-1" target="doZrAfIAgg1TxckknBKI-1">
+          <mxGeometry x="0.4863" relative="1" as="geometry">
+            <mxPoint x="300" y="190" as="sourcePoint"/>
+            <mxPoint x="570" y="190" as="targetPoint"/>
+            <mxPoint x="-1" as="offset"/>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
