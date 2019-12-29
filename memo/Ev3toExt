@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2019-12-29T14:29:40.406Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36" etag="fo799GVPEVplWiASxWMN" version="12.4.7" type="github" pages="5">
+<mxfile host="www.draw.io" modified="2019-12-29T14:30:25.280Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36" etag="FYWTkKfrchlXlWtyoj0j" version="12.4.7" type="github" pages="5">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
     <mxGraphModel dx="782" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -128,7 +128,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Copy of Page-1" id="4hAnTjQNTJsj0jO61Sp6">
-    <mxGraphModel dx="1117" dy="1009" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="782" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-0"/>
         <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-1" parent="BWUoyyzGKdHKp5Ux_3Ed-0"/>
@@ -225,10 +225,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-14" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;EV3&lt;/font&gt;&lt;/font&gt;" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=middle;align=center;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
-          <mxGeometry x="100" y="30" width="240" height="35" as="geometry"/>
+          <mxGeometry x="100" y="30" width="440" height="35" as="geometry"/>
         </mxCell>
         <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-15" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;外部システム&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=middle;align=center;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
-          <mxGeometry x="400" y="30" width="240" height="35" as="geometry"/>
+          <mxGeometry x="600" y="30" width="240" height="35" as="geometry"/>
         </mxCell>
         <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-21" value="データサイズ" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1" source="BWUoyyzGKdHKp5Ux_3Ed-6" target="BWUoyyzGKdHKp5Ux_3Ed-3">
           <mxGeometry relative="1" as="geometry">
