@@ -1,6 +1,6 @@
-<mxfile host="www.draw.io" modified="2019-12-29T05:42:40.169Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36" etag="2DLG55ZFmmj8r2crPHSe" version="12.4.7" type="github" pages="3">
+<mxfile host="www.draw.io" modified="2019-12-29T14:24:50.447Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36" etag="mfzMaW86sjGVI7aqIio7" version="12.4.7" type="github" pages="5">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
-    <mxGraphModel dx="782" dy="657" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="782" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
@@ -127,8 +127,199 @@
       </root>
     </mxGraphModel>
   </diagram>
+  <diagram name="Copy of Page-1" id="4hAnTjQNTJsj0jO61Sp6">
+    <mxGraphModel dx="539" dy="487" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-0"/>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-1" parent="BWUoyyzGKdHKp5Ux_3Ed-0"/>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-2" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;uart_task&lt;/font&gt;&lt;/font&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
+          <mxGeometry x="440" y="80" width="100" height="720" as="geometry"/>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-2">
+          <mxGeometry x="45" y="200" width="10" height="460" as="geometry"/>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-4" value="" style="shape=umlDestroy;whiteSpace=wrap;html=1;strokeWidth=3;align=center;" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-2">
+          <mxGeometry x="35" y="660" width="30" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-5" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;STbee_main&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
+          <mxGeometry x="600" y="80" width="100" height="720" as="geometry"/>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-6" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-5">
+          <mxGeometry x="45" y="220" width="10" height="400" as="geometry"/>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-7" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;シリアル&lt;br&gt;Jpegカメラ&lt;/font&gt;&lt;/font&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
+          <mxGeometry x="740" y="80" width="100" height="720" as="geometry"/>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-10" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-7">
+          <mxGeometry x="45" y="230" width="10" height="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-11" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;撮影開始&lt;/font&gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-7" target="BWUoyyzGKdHKp5Ux_3Ed-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-85" y="229.9999999999999" as="sourcePoint"/>
+            <Array as="points">
+              <mxPoint x="-80" y="230"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-16" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=-0.033;exitY=0.164;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-7" source="BWUoyyzGKdHKp5Ux_3Ed-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="259.58" as="sourcePoint"/>
+            <mxPoint x="-80" y="260" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-17" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;データサイズ要求&lt;/font&gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-85" y="290" as="sourcePoint"/>
+            <Array as="points">
+              <mxPoint x="-80" y="290"/>
+            </Array>
+            <mxPoint x="45" y="290" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-18" value="Jpegデータサイズ" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="330" as="sourcePoint"/>
+            <mxPoint x="-80" y="330.42" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-19" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;Jpegデータ要求&lt;/font&gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-85" y="369.17" as="sourcePoint"/>
+            <Array as="points">
+              <mxPoint x="-80" y="369.17"/>
+            </Array>
+            <mxPoint x="45" y="369.17" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-20" value="Jpegデータ" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="409.17" as="sourcePoint"/>
+            <mxPoint x="-80" y="409.5900000000001" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-8" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;main_task&lt;/font&gt;&lt;/font&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
+          <mxGeometry x="100" y="80" width="100" height="720" as="geometry"/>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-9" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-8">
+          <mxGeometry x="45" y="80" width="10" height="620" as="geometry"/>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-12" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;act_tsk&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1" source="BWUoyyzGKdHKp5Ux_3Ed-29" target="BWUoyyzGKdHKp5Ux_3Ed-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="285" as="sourcePoint"/>
+            <mxPoint x="485" y="285" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="440" y="290"/>
+              <mxPoint x="440" y="267"/>
+              <mxPoint x="457" y="260"/>
+              <mxPoint x="407" y="270"/>
+              <mxPoint x="437" y="270"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-13" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;撮影要求&lt;/font&gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1" source="BWUoyyzGKdHKp5Ux_3Ed-3" target="BWUoyyzGKdHKp5Ux_3Ed-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="270" as="sourcePoint"/>
+            <Array as="points">
+              <mxPoint x="600" y="300"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-14" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;EV3&lt;/font&gt;&lt;/font&gt;" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=middle;align=center;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
+          <mxGeometry x="100" y="30" width="240" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-15" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;外部システム&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=middle;align=center;spacingTop=-6;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
+          <mxGeometry x="400" y="30" width="240" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-21" value="データサイズ" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1" source="BWUoyyzGKdHKp5Ux_3Ed-6" target="BWUoyyzGKdHKp5Ux_3Ed-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="625" y="440" as="sourcePoint"/>
+            <mxPoint x="485" y="440.4200000000001" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="580" y="500"/>
+              <mxPoint x="570" y="500"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-22" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;RGBデータ要求&lt;/font&gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="620.0611764705882" as="sourcePoint"/>
+            <mxPoint x="644" y="620.06" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-23" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="650.06" as="sourcePoint"/>
+            <mxPoint x="500" y="650.4799999999998" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-24" value="完了通知&lt;br&gt;(データキュー)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1" source="BWUoyyzGKdHKp5Ux_3Ed-3" target="BWUoyyzGKdHKp5Ux_3Ed-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="720" as="sourcePoint"/>
+            <mxPoint x="360" y="720.4199999999998" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="440" y="730"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-25" value="Loop(1,*)" style="shape=umlFrame;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
+          <mxGeometry x="400" y="520" width="310" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-26" value="break" style="shape=umlFrame;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
+          <mxGeometry x="460" y="540" width="220" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-27" value="[データ末尾]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
+          <mxGeometry x="520" y="550" width="80" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-28" value="extsystem_task" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
+          <mxGeometry x="270" y="80" width="100" height="720" as="geometry"/>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-29" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
+          <mxGeometry x="315" y="160" width="10" height="620" as="geometry"/>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-30" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;初期化要求&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="180" as="sourcePoint"/>
+            <mxPoint x="310" y="180" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="210" y="180"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-31" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;撮影要求&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="250" as="sourcePoint"/>
+            <mxPoint x="309.9999999999999" y="250" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="210" y="250"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-32" value="初期化完了" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;entryX=1.05;entryY=0.096;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1" source="BWUoyyzGKdHKp5Ux_3Ed-29" target="BWUoyyzGKdHKp5Ux_3Ed-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="314" y="210" as="sourcePoint"/>
+            <mxPoint x="160" y="200.42000000000007" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWUoyyzGKdHKp5Ux_3Ed-33" value="要求受領" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;entryX=1.05;entryY=0.096;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.033;exitY=0.205;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="314.99999999999994" y="280" as="sourcePoint"/>
+            <mxPoint x="155.83" y="280.59000000000003" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7dGc6HEHVT44mrBE2nIS-0" value="&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;&lt;font style=&quot;vertical-align: inherit&quot;&gt;撮影要求&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;edgeStyle=elbowEdgeStyle;elbow=vertical;" edge="1" parent="BWUoyyzGKdHKp5Ux_3Ed-1" source="BWUoyyzGKdHKp5Ux_3Ed-9" target="BWUoyyzGKdHKp5Ux_3Ed-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="449.9999999999999" as="sourcePoint"/>
+            <mxPoint x="299.9999999999999" y="449.9999999999999" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="200" y="450"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
   <diagram id="W17kf9VDcWwrOBc6ag3c" name="Page-2">
-    <mxGraphModel dx="920" dy="773" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="782" dy="657" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="nmmA_ZJXvpLb5Fq_FxLa-0"/>
         <mxCell id="nmmA_ZJXvpLb5Fq_FxLa-1" parent="nmmA_ZJXvpLb5Fq_FxLa-0"/>
@@ -207,7 +398,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Copy of Page-2" id="gxAIJI9NE2NxnoMShUZJ">
-    <mxGraphModel dx="782" dy="657" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="782" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="TPAx8x0zu9E32fqHtNOR-0"/>
         <mxCell id="TPAx8x0zu9E32fqHtNOR-1" parent="TPAx8x0zu9E32fqHtNOR-0"/>
@@ -295,6 +486,14 @@
             <mxPoint x="1" as="offset"/>
           </mxGeometry>
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Xml3mUdZUX3sNPT45VxI" name="Page-4">
+    <mxGraphModel dx="782" dy="657" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="HMwU6dw_YeNDoJgQGYCc-0"/>
+        <mxCell id="HMwU6dw_YeNDoJgQGYCc-1" parent="HMwU6dw_YeNDoJgQGYCc-0"/>
       </root>
     </mxGraphModel>
   </diagram>
