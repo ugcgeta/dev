@@ -1,0 +1,35 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1NR-9C" pn="GW1NR-LV9QN88PC6/I5">gw1nr9c-004</Device>
+    <FileList>
+        <File path="src/Reset_Sync.sv" type="file.verilog" enable="1"/>
+        <File path="src/ip/bootram_2kx8_ip_0/gowin_sp/bootram_2kx8_ip_0.v" type="file.verilog" enable="1"/>
+        <File path="src/ip/bootram_2kx8_ip_1/gowin_sp/bootram_2kx8_ip_1.v" type="file.verilog" enable="1"/>
+        <File path="src/ip/bootram_2kx8_ip_2/gowin_sp/bootram_2kx8_ip_2.v" type="file.verilog" enable="1"/>
+        <File path="src/ip/bootram_2kx8_ip_3/gowin_sp/bootram_2kx8_ip_3.v" type="file.verilog" enable="1"/>
+        <File path="src/ip/gowin_sp/sram_2kx8_ip.v" type="file.verilog" enable="1"/>
+        <File path="src/ip/i2c_master/i2c_master_ip.v" type="file.verilog" enable="1"/>
+        <File path="src/ip/uart_master/uart_ip.v" type="file.verilog" enable="1"/>
+        <File path="src/top.sv" type="file.verilog" enable="1"/>
+        <File path="src/user/riscv/bus/PicoMem_Mux_1_4.v" type="file.verilog" enable="1"/>
+        <File path="src/user/riscv/bus/PicoMem_Mux_1_8.v" type="file.verilog" enable="1"/>
+        <File path="src/user/riscv/core/picorv32.v" type="file.verilog" enable="1"/>
+        <File path="src/user/riscv/peripheral/gpio/PicoMem_GPIO.v" type="file.verilog" enable="1"/>
+        <File path="src/user/riscv/peripheral/i2c_ip/mem_i2c_ip.sv" type="file.verilog" enable="1"/>
+        <File path="src/user/riscv/peripheral/spi_flash/PicoMem_SPI_Flash.v" type="file.verilog" enable="1"/>
+        <File path="src/user/riscv/peripheral/spi_flash/spimemio_puya.v" type="file.verilog" enable="1"/>
+        <File path="src/user/riscv/peripheral/sram/PicoMem_BOOT_SRAM_8KB.v" type="file.verilog" enable="1"/>
+        <File path="src/user/riscv/peripheral/sram/PicoMem_SRAM_8KB.v" type="file.verilog" enable="1"/>
+        <File path="src/user/riscv/peripheral/sram/bootram_2kx8_wrapper.v" type="file.verilog" enable="1"/>
+        <File path="src/user/riscv/peripheral/sram/sram_2kx8_behav.v" type="file.verilog" enable="0"/>
+        <File path="src/user/riscv/peripheral/sram/sram_2kx8_wrapper.v" type="file.verilog" enable="1"/>
+        <File path="src/user/riscv/peripheral/uart/PicoMem_UART.v" type="file.verilog" enable="1"/>
+        <File path="src/user/riscv/peripheral/uart/simpleuart.v" type="file.verilog" enable="1"/>
+        <File path="src/user/riscv/peripheral/uart_ip/mem_uart_ip.sv" type="file.verilog" enable="1"/>
+        <File path="src/user/riscv/riscv_top.v" type="file.verilog" enable="1"/>
+        <File path="src/fpga_project_riscv.cst" type="file.cst" enable="1"/>
+    </FileList>
+</Project>
